@@ -1,7 +1,8 @@
 import "./App.scss";
+import DatePicker from "./Components/DatePicker";
 
 function App() {
-  return "Hello";
+  return <DatePicker />;
 }
 
 export default App;

@@ -1,0 +1,59 @@
+.date-picker {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 16rem;
+    height: 20rem;
+  }
+
+  &-header {
+    flex-grow: 1;
+    // border: 1px solid red;
+  }
+
+  &-body {
+    flex-grow: 10;
+  }
+  &-week-header {
+    display: flex;
+    &-day {
+      flex-grow: 1;
+      border: 1px solid black;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  &-week-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 92%;
+
+    &-week {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+    }
+    &-day {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border: 1px solid black;
+      &:not(.current-month) {
+        color: lightgray;
+      }
+    }
+  }
+  &-footer {
+    flex-grow: 2;
+    border: 1px solid black;
+  }
+}
