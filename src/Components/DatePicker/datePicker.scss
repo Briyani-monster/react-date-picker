@@ -1,59 +1,36 @@
 .date-picker {
+  font-family: sans-serif;
+  display: flex;
+  width: 100%;
   &-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 16rem;
-    height: 20rem;
+    flex: 1;
   }
-
   &-header {
-    flex-grow: 1;
-    // border: 1px solid red;
-  }
-
-  &-body {
-    flex-grow: 10;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1%;
   }
   &-week-header {
-    display: flex;
-    &-day {
-      flex-grow: 1;
-      border: 1px solid black;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-    }
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+    color: red;
+    font-weight: 700;
   }
+  &-week-body-item {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
 
-  &-week-body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 92%;
-
-    &-week {
-      width: 100%;
-      height: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-    }
     &-day {
-      flex-grow: 1;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      border: 1px solid black;
+      cursor: pointer;
+
       &:not(.current-month) {
         color: lightgray;
       }
     }
-  }
-  &-footer {
-    flex-grow: 2;
-    border: 1px solid black;
   }
 }
